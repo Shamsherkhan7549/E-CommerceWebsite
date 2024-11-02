@@ -19,7 +19,9 @@ const BestSellersProduct = () => {
     <div className='my-10'>
             <div className='text-center py-8 text-3xl'>
                 <Title text1={"BEST SELLERS"} text2={"COLLECTIONS"}/>
-                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsum distinctio tempore .</p>
+                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
+                    Explore our Bestsellers Collection to find the most popular picks loved by our customers!
+                </p>
 
             </div>
             {/* id, image, name, price */}

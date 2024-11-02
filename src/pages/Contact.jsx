@@ -15,13 +15,13 @@ const Contact = () => {
           <div className='flex flex-col gap-5 justify-center'>
              <h3 className='font-semibold text-lg text-gray-600'>Our Store</h3>
              <p className='text-gray-500 leading-6'>
-                54709 Willms Station <br />
-                Suite 350, Washington, USA
+                110033 Moolchand colony <br />
+                Adarsh Nagar, New Delhi, India
              </p>
              
              <p className='text-gray-500 leading-6'>
-                Tel: (415) 555-0132 <br />
-                Email: admin@forever.com
+                Tel: (+91) 7549766215 <br />
+                Email: shamsherkhan7549@gmail.com
               </p>
 
              <h2 className='font-semibold text-lg text-gray-600'>Careers at Forever</h2>
