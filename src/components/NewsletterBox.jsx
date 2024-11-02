@@ -10,9 +10,9 @@ const NewsletterBox = () => {
   }
 
   return (
-    <div className='flex flex-col gap-2 items-center'>
+    <div className='flex flex-col gap-5 items-center'>
         <p className='text-2xl font-semibold'>Subscribe now & get 20% off</p>
-        <p className='text-gray-800 text-center'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p className='text-gray-500 text-center'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
         <form onSubmit={submitHandler} className='w-3/4 sm:w-2/4 flex flex-col sm:flex-row items-center justify-center  sm:border-2 border-gray rounded-lg sm:h-16 h-29'>
             <input onChange={e=>setInput(e.target.value)} type="email" placeholder='Enter your email' className=' w-full h-full pl-4 text-xl outline-none border-2 border-gray-500 min-h-12 rounded  sm:border-none '/>

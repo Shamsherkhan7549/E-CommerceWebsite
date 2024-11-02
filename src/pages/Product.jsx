@@ -7,7 +7,7 @@ import RelatedProduct from '../components/RelatedProduct';
 const Product = () => {
 
   const {productId} = useParams();
-  const {products,currency} = useContext(ShopContext)
+  const {products,currency,addToCart} = useContext(ShopContext)
   const [productData, setProductData] = useState({});
   const [image, setImage] = useState("");
   const [size, setSize] = useState("");
@@ -28,11 +28,11 @@ const Product = () => {
 
     })
   }
+  
+   
 
   useEffect(() => {
     fetchProductData()
-    console.log(productData.subCategory)
-    console.log(productData.category)
   },[productId, products])
 
   return  (
@@ -44,7 +44,7 @@ const Product = () => {
             <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full'>
             {
              productData.image && productData.image.map((item,index) => (
-               <img onClick={() => setImage(item)} src={item} key={index} className='h-[24%] sm:full sm:mb-3 flex-shrink-0 cursor-pointer' />
+               <img onClick={() => setImage(item)} src={item} key={index} className='w-[24%] sm:w-[98%] sm:full sm:mb-3 flex-shrink-0 cursor-pointer' />
               ))
             }
             </div>
@@ -87,7 +87,7 @@ const Product = () => {
                 
               </div>                 
             </div>
-            <button className='bg-black text-white mt-8 px-8 py-2 text-sm'>ADD TO CART</button> 
+            <button onClick={()=>addToCart(productData._id,size,0)} className='bg-black text-white mt-8 px-8 py-2 text-sm'>ADD TO CART</button> 
 
             <hr className='border-1.5 border-gray mt-8' />
 

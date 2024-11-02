@@ -7,7 +7,7 @@ import { ShopContext } from '../context/ShopContext'
 const Navbar = () => {
   let [isVisible, setVisible] = useState(false);
 
-  let {showSearch, setShowSearch} = useContext(ShopContext);
+  let {showSearch, setShowSearch,getCartCount} = useContext(ShopContext);
   
   return (
     <div className='flex items-center justify-between py-5 font-medium '>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <img src={assets.search_icon} alt="search-icon"  className='w-5 cursor-pointer' onClick={() => setShowSearch(true)}/>
 
             <div className='group relative'> 
-              <img className='w-5 cursor-pointer' src={assets.profile_icon} alt="profile-icon" />
+             <Link to={'/login'}> <img className='w-5 cursor-pointer' src={assets.profile_icon} alt="profile-icon" /> </Link>
 
               <div className=' group-hover:block hidden  absolute dropdown-menu right-0 pt-4'>
 
@@ -52,8 +52,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link>
-              <img src={assets.cart_icon} alt="cart-icon" className='w-5 cursor-pointer' />
+            <Link to='/cart' className='flex align-center justify-end relative'>
+              <img src={assets.cart_icon} alt="cart-icon" className='w-5 min-w-5 cursor-pointer ' />
+              <p className={`absolute text-[10px] leading-5 bg-black text-white font-semibold rounded-full text-center h-5 w-5 top-[11px] left-[9px]`}>{getCartCount()}</p>
             </Link>
 
             <img onClick={() => setVisible(true)} src={assets.menu_icon} alt="menu-icon"  className='w-5 cursor-pointer sm:hidden'/>
